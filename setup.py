@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="audio-soundwave-generator",
-    version="0.0.1",
+    version="0.0.4",
     author="Witold Wroblewski",
     author_email="witoldwrob@gmail.com",
     description="A package to convert audio file into several waveform images of specific duration",
@@ -18,9 +18,8 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    include_package_data=True,
-    package_data={
-    '': ['bin/*'],
-    }
+    install_requires=[
+          'ffmpeg',
+      ],
 
 )
